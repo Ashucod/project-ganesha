@@ -9,3 +9,108 @@ body {
     overflow: hidden; 
     background-color: #1a1a1a; 
 }
+
+.mandir-background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 1s ease-in-out; 
+}
+
+body.aarti-ambient-mode .mandir-background {
+    filter: brightness(0.4) sepia(0.5); 
+}
+
+.app-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    z-index: 100;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.main-action {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff9900, #ff5500);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 85, 0, 0.4);
+    transition: transform 0.2s;
+}
+
+.main-action:hover {
+    transform: scale(1.05);
+}
+
+.shrine-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.interactive-bell {
+    position: absolute;
+    top: 0;
+    /* right: 15%; */
+    width: 150px;
+    cursor: pointer;
+    z-index: 50;
+    transform-origin: top center; 
+    transition: transform 0.1s;
+}
+
+.swing {
+    transform: rotate(15deg);
+}
+
+.idol {
+    max-height: 60vh;
+    z-index: 10;
+    filter: drop-shadow(0px 0px 20px rgba(255, 200, 100, 0.3));
+    transition: filter 1s;
+}
+
+body.aarti-ambient-mode .idol {
+    filter: drop-shadow(0px 0px 40px rgba(255, 150, 0, 0.8));
+}
+
+.samagri-tray {
+    position: absolute;
+    bottom: 5%;
+    z-index: 15;
+}
+
+.samagri-tray img {
+    height: 95px; 
+}
+
+.thali-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transform: translate(-50%, -50%); 
+    pointer-events: none; 
+}
+
+.thali-container img {
+    width: 150px;
+    filter: drop-shadow(0px 20px 20px rgba(255, 100, 0, 0.6));
+}
+
+.hidden {
+    display: none;
+}
