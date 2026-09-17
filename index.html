@@ -4,46 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Aarti | Ganesh Chaturthi</title>
-    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- The main wrapper that will hold the mandir background -->
     <div class="mandir-background">
-        
-        <!-- Header with Title and the Aarti Control Button -->
         <header class="app-header">
             <h1>Shree Ganeshay Namah</h1>
             <p>Experience the divine presence</p>
             <button id="start-aarti-btn" class="main-action">Start Aarti</button>
         </header>
-
-        <!-- The Shrine where all the layers sit -->
         <main class="shrine-container">
-            
-            <!-- Layer 1: The Interactive Bell (Hanging from top) -->
             <img src="assets/images/bell.png" id="temple-bell" class="interactive-bell" alt="Temple Bell">
-
-            <!-- Layer 2: The Idol (Centered) -->
             <img src="assets/images/ganpati_idol.png" class="idol" alt="Lord Ganesha">
 
-            <!-- Layer 3: Puja Samagri (Positioned at the bottom) -->
             <div class="samagri-tray">
-                <!-- If you have separate images, you can add them here. 
-                     If it's one combined image, just use this: -->
                 <img src="assets/images/samagri.png" alt="Puja Samagri">
             </div>
-
-            <!-- Layer 4: The Cursor Following Thali (Hidden by default) -->
-            <!-- We use an ID here because JavaScript needs to target this exactly -->
             <div id="cursor-thali-container" class="thali-container hidden">
                 <img src="assets/images/aarti_thali.png" alt="Aarti Thali">
             </div>
 
         </main>
     </div>
-
-    <!-- Link to your JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
